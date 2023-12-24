@@ -83,7 +83,7 @@ const AdminDashboard = () => {
             <List spacing={3}>
               {/* ... Your list items */}
               <ListItem cursor="pointer">
-              <NavLink to="/dashboard">
+              <NavLink to="/">
                 <ListIcon as={MdDashboard} fontSize="xl" />
                 Dashboard
                 </NavLink>
