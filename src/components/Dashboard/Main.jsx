@@ -19,21 +19,21 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 Chart.register(CategoryScale);
 
 const Main = (props) => {
-  const [data, setData] = useState(props.data);
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchDataFromApi = async () => {
-  //     const API_URL = "https://blackcoffer-node-backend.onrender.com";
-  //     try {
-  //       const response = await axios.get(`${API_URL}/api/data`);
-  //       setData(response.data);
-  //     } catch (error) {
-  //       console.error("Error fetching data:", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const fetchDataFromApi = async () => {
+      const API_URL = "https://blackcoffer-node-backend.onrender.com";
+      try {
+        const response = await axios.get(`${API_URL}/api/data`);
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  //   fetchDataFromApi();
-  // }, []);
+    fetchDataFromApi();
+  }, []);
 
   return (
     <ChakraProvider>

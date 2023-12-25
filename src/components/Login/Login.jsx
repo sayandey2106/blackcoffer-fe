@@ -13,6 +13,7 @@ import {
   AlertDialogContent,
   AlertDialogOverlay,
 } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
 
 const LoginPage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,7 @@ const LoginPage = () => {
 
   return (
     <Box
-      bg="linear-gradient(to bottom right, #4F3BA9, #9068BE)"
+      bg="linear-gradient(to bottom right, purple, blue)"
       minH="100vh"
       display="flex"
       justifyContent="center"
@@ -42,10 +43,10 @@ const LoginPage = () => {
         borderColor="white" 
         textAlign="center"
       >
-        <h1 style={{ color: 'white' }}>Welcome Admin !!!</h1>
+        <h1 style={{ color: 'white' }}>Just press Login Button!!!</h1>
         <form>
           <FormControl>
-            <FormLabel style={{ color: 'white' }}>Admin Email</FormLabel>
+            <FormLabel style={{ color: 'white' }}>Email</FormLabel>
             <Input
               type="text"
               placeholder="Enter your username"
@@ -64,9 +65,12 @@ const LoginPage = () => {
               disabled
             />
           </FormControl>
-          <Button colorScheme="green" mt={6} w="100%" onClick={handleLogin}>
+          <NavLink to="/dashboard">
+
+          <Button colorScheme="green" mt={6} w="100%" >
             Login
           </Button>
+          </NavLink>
           {/* AlertDialog */}
           <AlertDialog isOpen={isOpen} leastDestructiveRef={undefined}>
             <AlertDialogOverlay>

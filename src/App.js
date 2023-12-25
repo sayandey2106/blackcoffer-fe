@@ -11,6 +11,7 @@ import LikelihoodRadarChart from "./components/Dashboard/LikelihoodChart";
 import axios from "axios";
 import AdminDashboard from "./components/Dashboard/Sidebar";
 import TopicsPolarAreaChart from "./components/Dashboard/TopicChart";
+import Navbar from "./components/Dashboard/Navbar";
 const AppRouter = () => {
 
   const [data, setData] = useState([]);
@@ -31,8 +32,9 @@ const AppRouter = () => {
   return (
     <Router>
       <AdminDashboard />
+      <Navbar/>
       <Routes>
-        <Route path="/" element={<Main data={data}/>} />
+        <Route path="/dashboard" element={<Main data={data}/>} />
         <Route path="/country" element={<CountryChart data={data}/>} />
         <Route path="/intensity" element={<IntensityChart data={data}/>} />
         <Route path="/region" element={<RegionChart data={data}/>} />
@@ -40,7 +42,7 @@ const AppRouter = () => {
         <Route path="/sectorchart" element={<PieChart data={data}/>} />
         <Route path="/likelihood" element={<LikelihoodRadarChart data={data}/>} />
         <Route path="/topic" element={<TopicsPolarAreaChart data={data}/>} />
-        {/* <Route path="/" element={<Login />} /> */}
+        <Route path="/" element={<Login />} />
       </Routes>
     </Router>
   );
