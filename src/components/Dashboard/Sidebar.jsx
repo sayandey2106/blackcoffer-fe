@@ -133,11 +133,11 @@ Likelihood Chart
             <Flex alignItems="center" mt="140%">
               <Avatar
                 size="lg"
-                src="https://avatars.githubusercontent.com/u/110231091?s=400&u=dfefa66e38cbdd84674e1a9f55737a51827b8725&v=4"
+                src="https://yt3.googleusercontent.com/-CFTJHU7fEWb7BYEb6Jh9gm1EpetvVGQqtof0Rbh-VQRIznYYKJxCaqv_9HeBcmJmIsp2vOO9JU=s900-c-k-c0x00ffffff-no-rj"
                 mr={4}
               />
               <Box>
-                <Heading size="md">Ritesh Kr. Shukla</Heading>
+                <Heading size="md">User</Heading>
                 <Text
                   fontSize="sm"
                   color={useColorModeValue("gray.500", "gray.400")}

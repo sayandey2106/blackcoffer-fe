@@ -32,7 +32,7 @@ const AppRouter = () => {
   return (
     <Router>
       <AdminDashboard />
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
         <Route path="/dashboard" element={<Main data={data}/>} />
         <Route path="/country" element={<CountryChart data={data}/>} />
